@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <title>Kristina Hayes Week 9</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kristina Hayes">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="" rel="stylesheet" 
+              media="screen" type="text/css"/>
+        <script type="text/javascript" src="assign09.js"></script>
+        <style>
+            
+            html {
+                margin: auto;
+            }
+            
+            table {
+                border: 2px solid #040AA7;
+                padding: 5px;
+                background-color: whitesmoke;
+            }
+            
+            #country {
+                 background-color:gray; 
+                 padding:2em;
+            }
+            
+            #students {
+                 background-color:white; 
+                 padding:2em;
+            }
+
+        </style>
+    </head>
+
+    <body style="background-color: black">
+        <header>
+            <h1 style="font-family: Helvetica; text-align:center; 
+                background-color:#040AA7; color: ghostwhite">
+                JSON and AJAX Technology</h1>
+        </header>
+        
+        <section id="main" style="font-family: Helvetica">
+            <div id="country">
+                <h2>Cities</h2>
+                <h3>Select a country:</h3>
+                <select name="countrytxt" id="countrytxt" onChange="getCities()">
+                    <option value="0">select</option>
+                    <option value="1">USA</option>
+                    <option value="2">CANADA</option>
+                    <option value="3">MEXICO</option>
+                    <option value="4">RUSSIA</option>
+                </select>
+                <button onClick="clearCityTable()">Reset</button>
+                <h3>Ten largest cities and populations:</h3>
+                <table id="cityTable" style="margin:2em; width:40%">
+                    <thead>
+                        <tr>
+                            <th>City</th>
+                            <th>Population</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div id="students">
+                <h2>Students</h2>
+                <h3>Enter file name (json.txt or json1.txt):</h3>
+                <input name="fileInput" onBlur="validateFileName(this.value)"
+                       onFocus="resetFileName(this.value)"
+                       id="parsejson" value="json.txt" size="15">
+                <button onClick="getStudents()">Parse JSON</button>
+                <button onClick="clearStudentTable()">Reset JSON</button>
+                <h3>Student Data:</h3>
+                <table id="studentTable" style="margin:2em; width:60%">
+                    <thead>
+                        <tr>
+                            <th>First</th>
+                            <th>Last</th>
+                            <th>Address</th>
+                            <th>Major</th>
+                            <th>GPA</th>
+                        </tr>
+                    </thead>
+                </table> 
+            </div>
+        </section>
+        <footer style="font-family: Helvetica; text-align:center; 
+                margin:0; padding:2em; color:#379683">     
+            
+        </footer>
+    </body>
+</html>
